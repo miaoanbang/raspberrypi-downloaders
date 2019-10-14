@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  xware:
+    image: tinko/rpi-xware
+    volumes:
+      - /home/pi/ThunderDownloads:/data
+    deploy:
+      restart_policy:
+        condition: on-failure
