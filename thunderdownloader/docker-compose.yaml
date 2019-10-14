@@ -3,6 +3,7 @@ version: "3"
 services:
   xware:
     image: tinko/rpi-xware
+    container_name: xware
     volumes:
       - /home/pi/ThunderDownloads:/data
     deploy:
