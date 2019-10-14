@@ -2,8 +2,8 @@ version: "3"
 
 services:
   xware:
-    container_name: xware
     image: tinko/rpi-xware
+    container_name: xware
     restart: unless-stopped
     volumes:
       - /home/pi/ThunderDownloads:/data

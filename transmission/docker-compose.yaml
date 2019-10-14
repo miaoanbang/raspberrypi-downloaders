@@ -1,13 +1,17 @@
 version: "3"
 
 services:
-  nginx:
-    container_name: nginx
-    image: nginx:alpine
+  autossh-transmission:
+    image: jnovack/autossh:latest-arm32v7
+    container_name: autossh-transmission
     restart: unless-stopped
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - /home/pi/nginx/:/etc/nginx
-      - /home/pi/nginx/:/etc/ssl/private
+    environment:
+      - SSH_MODE=-R
+      - SSH_HOSTUSER=anbangtest
+      - SSH_HOSTNAME=serveo.net
+      - SSH_TUNNEL_REMOTE=80
+      - SSH_TUNNEL_HOST=localhost
+      - SSH_TUNNEL_LOCAL=9091
+      - SSH_KNOWN_HOSTS=/home/pi/.ssh/known_hosts
+      - SSH_KEY_FILE=/home/pi/.ssh/id_rsa
+    restart: always
