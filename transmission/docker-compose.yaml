@@ -13,5 +13,3 @@ services:
       - SSH_TUNNEL_HOST=localhost
       - SSH_TUNNEL_LOCAL=9091
       - SSH_KNOWN_HOSTS=/home/pi/.ssh/known_hosts
-      - SSH_KEY_FILE=/home/pi/.ssh/id_rsa
-    restart: always
