@@ -6,7 +6,6 @@ services:
     container_name: autossh-transmission
     restart: unless-stopped
     environment:
-      - SSH_MODE=-R
       - SSH_HOSTUSER=anbangtest
       - SSH_HOSTNAME=serveo.net
       - SSH_TUNNEL_REMOTE=80
