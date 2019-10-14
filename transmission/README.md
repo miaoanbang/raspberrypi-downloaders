@@ -1,6 +1,9 @@
-# 迅雷远程下载client（不推荐）
+# Transmission BitTorrent Client
 
 ### Resources:
 
-- [树莓派迅雷docker image](https://gitlab.com/tinko/rpi-xware)
+- [Transmission](https://transmissionbt.com/): BitTorrent Client
+- [NGINX](https://www.nginx.com/): reverse proxy for secure https communication
+- [Serveo](http://serveo.net/): SSH tunneling to expose localhost
+- [AutoSSH](https://github.com/jnovack/docker-autossh): AutoSSH docker container
 

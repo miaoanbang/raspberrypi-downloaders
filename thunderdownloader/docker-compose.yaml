@@ -2,10 +2,10 @@ version: "3"
 
 services:
   xware:
-    image: tinko/rpi-xware
     container_name: xware
+    image: tinko/rpi-xware
+    restart: unless-stopped
     volumes:
       - /home/pi/ThunderDownloads:/data
       - /home/pi/ThunderDownloads/ThunderDB:/data/ThunderDB
       - /home/pi/Downloads:/data/TDDOWNLOAD
-    restart: unless-stopped

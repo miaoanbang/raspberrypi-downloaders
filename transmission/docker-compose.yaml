@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /home/pi/nginx/:/etc/nginx
+      - /home/pi/nginx/:/etc/ssl/private
