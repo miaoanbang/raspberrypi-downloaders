@@ -5,7 +5,6 @@ services:
     image: tinko/rpi-xware
     container_name: xware
     volumes:
-      - /home/pi/ThunderDownloads:/data
-    deploy:
-      restart_policy:
-        condition: on-failure
+      - /home/pi/Downloads:/data/TDDOWNLOAD
+      - /home/pi/ThunderDownloads/ThunderDB:/data/ThunderDB
+    restart: unless-stopped
